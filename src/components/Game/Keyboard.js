@@ -20,10 +20,10 @@ export function Keyboard({ guesses }) {
   console.log(guesses.flat());
   const letters = guesses.flat();
   console.log("letters", letters);
-  letters.forEach((value, index) => {
+  letters.forEach((value) => {
     const letter = value.letter;
     const status = value.status;
-    const curStatus = keyboardHash[value.letter];
+    const curStatus = keyboardHash[letter];
 
     if (!curStatus) {
       keyboardHash[letter] = status;
